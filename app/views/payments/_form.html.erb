@@ -1,0 +1,26 @@
+<%= form_for @payment, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :client, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :client, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :made_on, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :made_on, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amount, :class => 'text_field' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            payments_path, :class => 'btn btn-default' %>
+ 
+<% end %>
